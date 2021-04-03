@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Fly Guy</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Information about my canvai music channels and how I make my music.">
+    <meta name="keywords" content="canvai,music,video,free music,copyright free music,video,music video, photo">
+    <meta name="author" content="Matteo Prock">
+    <link rel="stylesheet" type="text/css" href="../css/cssMusic.css">
+    <link rel="stylesheet" type="text/css" href="../css/game.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body onload="restart()"> 
+
+
+
+
+
+
+    <h1 class="headerNewLayout">FLY GUY</h1>
+    <div class="atLeast">
+        
+    <section id="section2">
+        <div id="game1hidediv">
+
+
+            <div id="video1Text"><h2></h2><br>
+
+            
+       
+
+
+            </div>
+            
+
+        </div>
+        
+        
+
+
+
+        <div id="restartDiv">
+
+        </div>
+    </section>
+    <div class="scoreboard">
+        <span id="score" style="display:none;">Your Score: 0</span>
+        <button onclick="restart();" id="restart" class="button">Restart Game</button>
+
+        </div>
+
+
+
+
+
+
+        <div class="newGameLayout">
+            <div id="myScore" class="scoreNewLayout">Score:</div>
+            <div class="restartNewLayout" onclick="refresh();">Restart</div>
+
+        </div>
+
+    </div>
+    <div class="atLeastMan">
+        You need a screen size of at least <span class="size">960px</span> width to play :) 
+    </div>
+
+
+
+
+</div>
+<script>
+            
+        function button(){
+            let signup=document.getElementById("login");           
+                if(localStorage.vorname === null || localStorage.vorname=="Sign up"){
+                localStorage.vorname="Sign up";
+                signup.innerHTML=localStorage.vorname;  
+                }else if(localStorage.vorname!="Sign up"){
+                signup.innerHTML="Hi " + localStorage.vorname + "!";
+                }
+                
+        }
+        
+        button();
+         
+        function local(){
+            let vorname=document.getElementById("vorname").value;
+            if(vorname!==""){
+            localStorage.vorname=vorname;
+            }
+            let signup=document.getElementById("login");
+            signup.innerHTML="<span class='eini'>" + "Hi " + localStorage.vorname + "!" + "</span>" || "Sign up";
+        
+          
+        }
+            
+</script>
+<script type="text/javascript" src="../js/flyguy.js"></script>
+<script type="text/javascript" src="../js/gameLayout.js"></script>
+<script type="text/javascript" src="../js/responsiveCode.js"></script>
+<script type="text/javascript" src="../js/musicCode.js"></script>
+</body>
+</html>

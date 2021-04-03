@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Canvai | Media</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Canvai is mostly known for music production and video creation. On canvai.at you'll find all recent projects from new songs to videos, photos and more.">
+    <meta name="keywords" content="canvai,music,video,free music,copyright free music,video,music video, photo">
+    <meta name="author" content="Matteo Prock">
+    <link rel="stylesheet" href="purecookie.css"/>
+    <link rel="stylesheet" type="text/css" href="css/cssIndexIndex.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/backback.png">
+    
+</head>
+
+<body>
+
+
+<header></header>
+
+<div id="wrapper">
+    
+    <div id="hoverHilfe"></div>
+
+<nav>
+    <a href="index.html"><div id="home">Home</div></a>
+
+    <div class="dropdown">
+        <a href="html/music.html"><div id="music">Music</div></a>
+                <div id="platzhalter">
+                    <a href="html/freeMusic.html"><div id="dropdown-content">Free to use</div></a>
+
+            </div>
+    </div>
+
+
+    <a href="html/video.html"><div id="video">Video</div></a>
+    <a href="html/photo.html"><div id="photo">Photo</div></a>
+    <div class="dropdown">
+        <a href="html/game1.html"><div id="photo">Games</div></a>
+                <div id="platzhalter1">
+                    <a href="html/game1.html"><div id="dropdown-content">Fly Guy</div></a>
+                </div>
+    </div>
+    <a href="html/canvai.html"><div id="canvai"><img src="images/cann.png" width=90></div></a>
+    <a href="index.html"><div id="canvai1"><img src="images/cann.png" width=90></div></a>
+        
+        
+        <a href="#menu" id="toggle"><span></span></a>
+             <div id="menu">
+                <ul>
+                    <li><a href="html/music.html">Music</a></li>
+                    <li><a href="html/freeMusic.html">More Music</a></li>
+                    <li><a href="html/video.html">Video</a></li>
+                    <li><a href="html/photo.html">Photo</a></li>
+                    <li><a href="html/canvai.html">Info</a></li>
+                    <li><a href="html/signup.php">Sign up</a></li>
+                </ul>
+            </div>
+            
+    <a href="html/signup.php"><div id="login">Sign up</div></a>
+</nav>
+
+<article>
+        <section id="section1">
+            <h1>Home</h1>
+            <hr width="320px" class="homeLine"></hr>
+        </section>
+        
+        <section id="section2">
+            
+        <div id="cv">
+            
+            <div id="kreis">
+                <svg width="1000" height="500">
+                    <circle cx="135" cy="30" r="60" class="hinKreis" transform="rotate(50,0,0)" id="derCircle" ></circle>
+                </svg>
+            </div>
+            
+            <div id="dreieck1">  
+                <svg height="300px" width="300px">
+                    <polygon points="150,70 90,180 210,180" class="triangle1" id="dreieck"/>
+                    
+                    150,80 90,210 210,210
+                </svg>
+            </div>
+            
+        </div>
+        
+        <div id="video1Text">
+            <p>Canvai is mostly known for music production and video creation. On this site you find all recent projects from new songs to videos, photos and more. <span class="hide1">Click on "Canvai" in the menu to get
+            some information about how everything started and how I work. If you wish you can sign up on the top right
+            corner to hear from me when there are new releases. Thank you and have fun!</span></p>
+        </div>
+            
+        </section>
+
+            <hr class="trennl"></hr>
+        
+        <section id="section3">
+            <h2 class="hideYourSide1">Teal Blue</h2>
+            <iframe width="560" height="315" class="ppVideo" src="https://www.youtube.com/embed/Kxdiq7rGu2o" frameborder="0" allowfullscreen></iframe>
+            <div id="video2Text"><h2 class="yourSide1">Teal Blue</h2><br><p>Chill future bass track visualized with some clips from a trip to south tyrol. Now also on Spotify!
+            </p>
+            <img src="images/pool.png" width="320px" height="180px" class="yourSide">            
+            </div>
+
+        </section>
+</article>
+
+<footer>
+    <div id="footLeft">
+        <a target="_blank" href="https://www.facebook.com/canvaimusic/"><img src="images/facebook_icon.png" width="30" class="footerFacebook"></a>
+        <a target="_blank" href="https://twitter.com/canvaimusic"><img src="images/twitt_icon.png" width="30" class="footerFacebook"></a>
+        <a target="_blank" href="https://www.youtube.com/user/canvaimusic"><img src="images/youtube_icon.svg" width="40" class="footerFacebook"></a>
+    </div>
+    <div id="footMiddle">
+               
+<a href="mailto:canvaimusic@gmail.com" style="color:black">canvaimusic@gmail.com</a>  
+        <a target="_blank" href="https://www.facebook.com/canvaimusic/"><img src="images/facebook_icon.png" width="30" class="twidda"></a>
+
+                
+    </div>
+    <div id="footRight">
+        <p>Copyright | Matteo Prock 2020</p>
+    </div>
+</footer>
+
+</div>
+
+
+
+    <script>
+            
+        function button(){
+            let signup=document.getElementById("login");           
+                if(localStorage.vorname == null || localStorage.vorname=="Sign up"){
+                localStorage.vorname="Sign up";
+                signup.innerHTML=localStorage.vorname;  
+                }else if(localStorage.vorname!="Sign up"){
+                signup.innerHTML="Hi " + localStorage.vorname + "!";
+                }
+                
+        }
+        
+        button();
+         
+        function local(){
+            let vorname=document.getElementById("vorname").value;
+            if(vorname!=""){
+            localStorage.vorname=vorname;
+            }
+            let signup=document.getElementById("login");
+            signup.innerHTML="<span class='eini'>" + "Hi " + localStorage.vorname + "!" + "</span>" || "Sign up";
+        
+          
+        }
+            
+    </script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/responsiveCode.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+
+<script src="purecookie.js"></script>
+
+</body>
+</html>
