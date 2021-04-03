@@ -11,62 +11,37 @@
     <link rel="stylesheet" type="text/css" href="css/game.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/bird.ico">
 </head>
 
 <body onload="restart()"> 
-
-
-
-
-
-
     <h1 class="headerNewLayout">FLY GUY</h1>
+
     <div class="atLeast">
-        
-    <section id="section2">
-        <div id="game1hidediv">
-
-
-            <div id="video1Text"><h2></h2><br>
-
-            
-       
-
-
+        <section id="section2">
+            <div id="game1hidediv">
+                <div id="video1Text">
+                    <h2></h2>
+                    <br>
+                </div>
             </div>
-            
 
+            <div id="restartDiv"></div>
+        </section>
+
+        <div class="scoreboard">
+            <span id="score" style="display:none;">Your Score: 0</span>
+            <button onclick="restart();" id="restart" class="button">Restart Game</button>
         </div>
-        
-        
-
-
-
-        <div id="restartDiv">
-
-        </div>
-    </section>
-    <div class="scoreboard">
-        <span id="score" style="display:none;">Your Score: 0</span>
-        <button onclick="restart();" id="restart" class="button">Restart Game</button>
-
-        </div>
-
-
-
-
-
 
         <div class="newGameLayout">
             <div id="myScore" class="scoreNewLayout">Score:</div>
             <div class="restartNewLayout" onclick="refresh();">Restart</div>
-
         </div>
-
     </div>
+
     <div class="atLeastMan">
-        You need a screen size of at least <span class="size">960px</span> width to play :) 
+        You need a screen size width of at least <span class="size">960px</span> to play :) 
     </div>
 
 
@@ -78,8 +53,7 @@
         function button(){
             let signup=document.getElementById("login");           
                 if(localStorage.vorname === null || localStorage.vorname=="Sign up"){
-                localStorage.vorname="Sign up";
-                signup.innerHTML=localStorage.vorname;  
+                localStorage.vorname="Sign up"; 
                 }else if(localStorage.vorname!="Sign up"){
                 signup.innerHTML="Hi " + localStorage.vorname + "!";
                 }

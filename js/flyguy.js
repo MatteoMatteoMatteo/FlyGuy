@@ -346,8 +346,6 @@ function updateGameArea() {
     myGameArea.frameNo += 1;
     let score = document.getElementById('myScore');
     score.innerHTML = 'Your Score: ' + myGameArea.frameNo;
-    console.log(myCoin.x);
-    console.log(myCoin.y);
   } else {
     myGameArea.clear();
     myBackground.speedX = -0.2;
