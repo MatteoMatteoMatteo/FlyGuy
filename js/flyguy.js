@@ -22,18 +22,18 @@ function startGame() {
   myGamePiece = new component(
     50,
     50,
-    '../images/bluebird1.png',
+    'images/bluebird1.png',
     window.innerWidth / 2 - 590,
     50,
     'image'
   );
-  myBackground = new component(2000, 320, '../images/desert1.svg', 0, 0, 'background');
-  myObstacle = new obstacle(30, 85.71, '../images/comet.svg', 900, -50, 'obstacle');
-  myObstacleObstacle = new obstacleObstacle(30, 85.71, '../images/comet.svg', 500, -50, 'obstacle');
+  myBackground = new component(2000, 320, 'images/desert1.svg', 0, 0, 'background');
+  myObstacle = new obstacle(30, 85.71, 'images/comet.svg', 900, -50, 'obstacle');
+  myObstacleObstacle = new obstacleObstacle(30, 85.71, 'images/comet.svg', 500, -50, 'obstacle');
   myCoin = new coins(
     26,
     26,
-    '../images/dollar.png',
+    'images/dollar.png',
     Math.floor(Math.random() * myGameArea.canvas.width) + 20,
     Math.floor(Math.random() * myGameArea.canvas.height) + 5,
     'dollar'
@@ -49,7 +49,7 @@ function startGame() {
 }
 
 function move(dir) {
-  myGamePiece.image.src = '../images/bluebirdAction.png';
+  myGamePiece.image.src = 'images/bluebirdAction.png';
   if (dir == 'up') {
     myGamePiece.speedY = -1;
   }
@@ -65,7 +65,7 @@ function move(dir) {
 }
 
 function clearmove() {
-  myGamePiece.image.src = '../images/bluebird1.png';
+  myGamePiece.image.src = 'images/bluebird1.png';
   myGamePiece.speedY = 0;
   myGamePiece.speedX = 0;
   myBackground.speedX = 0;
@@ -108,7 +108,7 @@ var myGameArea = {
   },
   stop: function () {
     clearInterval(this.interval);
-    myGamePiece.image.src = '../images/bluebirdtot.png';
+    myGamePiece.image.src = 'images/bluebirdtot.png';
   },
 };
 
@@ -315,7 +315,7 @@ function moveleft() {
 }
 
 function moveright() {
-  myGamePiece.image.src = '../images/bluebirdAction.png';
+  myGamePiece.image.src = 'images/bluebirdAction.png';
   myGamePiece.speedX += 2;
   myBackground.speedX = -5;
   isIt = true;
@@ -368,11 +368,11 @@ function updateGameArea() {
     }
 
     if (myGameArea.keys && myGameArea.keys[39]) {
-      myGamePiece.image.src = '../images/bluebirdAction.png';
+      myGamePiece.image.src = 'images/bluebirdAction.png';
       myGamePiece.speedX = 1.7;
       myBackground.speedX -= 1.5;
     } else {
-      myGamePiece.image.src = '../images/bluebird1.png';
+      myGamePiece.image.src = 'images/bluebird1.png';
     }
     if (myGameArea.keys && myGameArea.keys[38]) {
       myGamePiece.speedY = -2.5;
