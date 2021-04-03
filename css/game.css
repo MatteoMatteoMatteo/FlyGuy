@@ -52,7 +52,9 @@ html {
 }
 
 .restartNewLayout:hover {
-  background-color: white;
+  background-color: #38b9e0;
+  color: white;
+  border: white 3px solid;
 }
 
 .atLeast {
